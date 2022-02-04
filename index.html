@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Card Game Proposal</title>
+  </head>
+
+  <body>
+    <h1>Nathan Fleming</h1>
+    
+    <h2>General Information</h2>
+    
+    <p>This web page will consist of a proposal for the mechanical design of a card game. These mechanics are, as of yet, untested. The actual cards for a future playtest will be designed at a later date.</p>
+    
+    <p>When possible, descriptions of mechanics will describe considerations for balancing. Note that these considerations are purely conjecture, and are almost guaranteed to be imprecise.</p>
+    
+    <h3>Inspirations</h3>
+    
+    <p>This card game is heavily inspired by Yu-Gi-Oh and Magic: The Gathering (MtG), the two card games I've played the most of. In reference to MtG, I specifically took inspiration from the EDH format, better known as Commander, which is a format designed for casual play. I did not take much if any inspiration from most other formats, such as modern, standard, and historic. It also borrows some mechanics from other card games like Hearthstone and Force of Will. There are also mechanics whichh were considered, but ultimately cut. Those will not be listed here.</p>
+  
+    <h2>How to Play</h2>
+    
+    <h3>Set Up</h3>
+    
+    <p>Each player has a basic deck and an extra deck. Basic decks consist of fifty cards, and can only have two cards that share a card name. Your extra deck consists of twenty cards, can only have one card of each card name, and can only have seven total chaos and FAKE cards. You can only draw cards from your basic deck. Cards from your extra deck require special conditions to activate. All players have a single hero card. In addition, set aside the zones. Each player has a discard pile, an exile zone, five creature zones, five artifact or structure zones, and a field card zone. There is a single event zone shared amongst all players. At the start of the game before cards are drawn, each player declares a resource which their hero will produce. Then, each player draws four cards, after which the first turn takes place.</p> 
+    
+   <table>
+      <caption>Zones of Play</caption>
+      <tr>
+        <th>Zone Name</th>
+        <th>Number of Cards Allowed</th>
+        <th>Type of Cards Allowed</th>
+      </tr>
+      
+      <tr>
+        <th>Creature Zone</th>
+        <th>5</th>
+        <th>Creatures or Mosaics With Creatures</th>
+      </tr>
+      
+      <tr>
+        <th>Artifact zones</th>
+        <th>5</th>
+        <th>Artifacts, Structures, Traps and Mosaics</th>
+      </tr>
+      
+      <tr>
+        <th>Event Zone</th>
+        <th>Any Amount</th>
+        <th>Events</th>
+      </tr>
+      
+      <tr>
+        <th>Hero Zone</th>
+        <th>1</th>
+        <th>Heroes</th>
+      </tr>
+      
+      <tr>
+        <th>Field Zone</th>
+        <th>1</th>
+        <th>Field Cards</th>
+      </tr>
+      
+      <tr>
+        <th>Exile Zone</th>
+        <th>Any Number</th>
+        <th>Any Cards You Own</th>
+      </tr>
+      
+      <tr>
+        <th>Discard Pile</th>
+        <th>Any Number</th>
+        <th>Any Cards You Own</th>
+      </tr>
+    </table>
+    
+    <h3>Beginning Phase</h3>
+    
+    <p>A player's turn begins with a beginning phase. This is the equivalent of "upkeep" in MtG. Any tapped permanents are untapped, you gain 5 of the resource chosen at the start of the game, and unless you are the first player on the first turn, you draw a card.</p>
+    
+    <h3>Main and Battle Phases</h3>
+    
+    <p>There is one main and one battle phase per turn. Rather than happening one after another, you alternate between these phases.</p>
+    
+    <p>During the main phase, and only during the main phase, you can spend resources to cast cards. Most cards can be cast for multiple potential resources. For example, a mercenary creature may be cast for gold, but may also be cast for influence.<p>
+    
+    <p>Action cards do not exist in any zone, and are discarded immediately after resolving their effect. All other cards immediately enter their associated zone.</p>
+    
+    <p>When you declare an attack, the main phase is suspended. You are now in the battle phase. Players can only declare attacks during their main phase. During each attack, a player can attack with as many creatures as they want, but can only attack one card on the board at a time, and can only attack each card once. If a creature attacks, it is tapped. A tapped creature cannot attack. An attack may only be declared on a hero (player), a creature, or a structure (anything with health or defense). When an attack is declared, the defending player may declare blockers. Any number of blockers can block a single attacker, in which case the attacker fights all of them. If an attacker is blocked, the creature does not deal damage to the attacked permanent unless otherwise specified, and instead fights the blockers.</p>
+    
+    <p>Once all attackers have either attacked the target or fought their blockers, the battle phase is suspended, and the main phase continues.</p>
+    
+    <h3>End Step</h3>
+    
+    <p>A player can declare at any point in their main phase that their turn is over. If this happens, before the turn ends, an "end step" happens. Nothing else happens naturally during the end step. However, many card effects only happen during the end step.</p>
+    
+    <h3>Card Types</h3>
+      
+    <ol>
+      <li>creatures/monsters/minions</li>
+      <li>actions</li>
+      <li>equipment</li>
+      <li>weapons</li>
+      <li>artifacts</li>
+      <li>structures</li>
+      <li>Field</li>
+      <li>Events</li>
+      <li>traps</li>
+      <li>chaos</li>
+      <li>FAKE</li>
+      <li>fusion</li>
+      <li>mosaic</li>
+      <li>symphonic</li>
+      <li>hero (you)</li>
+    </ol>
+    
+    <h2>Basic Card Types</h2>
+    
+    <p>All basic card types have subtypes. These subtypes are not necessarily unique to one card type. I desire a soft minimum of three card types, and a hard maximum of seven card types. The subtypes exist purely for interaction. There should not be cards without subtypes, such as most instants and sorceries in MtG; ALL cards have subtypes.</p>
+    
+    <p>No individual card can have multiple basic card types. However, you may have both a basic card type and a special card type.</p>
+    
+    <h3>hero</h3>
+    
+    <p>This card represents "you". Listed on the card is:</p>
+    
+    <ol>
+      <li>Your starting and maximum life totals</li>
+      <li>The equipment slots you have available</li>
+      <li>A list of "subtypes" for your character</li>
+      <li>A few stats for your character (specifics to be decided later)</li>
+      <li>Any special effects for your character</li>
+      <li>Conditions for which your character can flip</li>
+      <li>The world they're from</li>
+    </ol>
+    
+    <p>The maximum life total is typically higher than the starting life total. This allows you to go past your starting total, but prevents abuse where you can go into hundreds of times your starting total.</p>
+    
+    <p>The subtypes are shared across different card types, and are not tied to any one card type. Adding multiple common subtypes to individual heroes allows extra interactions and broadens design space.</p>
+    
+    <p>Every hero has special effects. This is heavily inspired by the commander mechanic in MtG. These special effects will be bonuses you build your deck around. Some cards may not be practical or even be playable without the right effect.</p>
+    
+    <p>I don't think every hero needs to have two sides. In fact I would caution against making any hero, in isolation, too complex. However, I do think utilizing the fact that heroes don't need a backside to match with the other cards opens up many doors.</p>
+    
+    <p>Equipment slots are represented by icons. Weapons allow a hero to attack. If a hero attacks, they take damage equal to the defending creature's attack.</p>
+    
+    <p>Stats exist for no other reason than to provide extra, conditional interaction. Maybe a certain card gets a bonus if your character is female, or if your enemy is female. Maybe you have a "strength" stat, which affects how much damage certain weapons deal... or if you can use that weapon at all. Maybe there's a luck stat, which would affect any number of cards and abilities. The sky's the limit, though smart designers need to be careful not to add superficial complexity (as opposed to true depth).</p>
+    
+    <p>The world a character is from affects some cards, but mostly exists for lore purposes. Treat it as an additional stat for now.</p>
+    
+    <h3>Equipment and Weapons</p>
+    
+    <p>Equipment can only be cast if your character has free equipment slots. Some slots designate a part of the body, such as head, hand, body, "accessory". Some slots specify either a "usage type" or a theme, such as Gothic, technological, expensive, or natural. There will be a small number of frequently recurring equipment slot types, and a small number of slightly less common types. Adding too many "new" types of slots ultimately leads to parasitic design, and is generally not a good idea.</p>
+    
+    <p>Weapons are a special type of equipment. A hero can equip as many weapons as they like, but they can only attack with one per turn (unless otherwise stated).</p>
+    
+    <h3>Artifacts and Structures</h3>
+    
+    <p>Artifacts carry the same rules as structures, with the exception that structures can be attacked and destroyed. As a result, structures have the addition of a health stat. (Maybe use the word "fortitude" for structures' health?)</p>
+    
+    <p>There are five artifact slots. Once all five slots are filled, you can no longer play artifact cards. These slots do not share a space with the equivalent of "spell" cards in yu-gi-oh (actions), but they do share a space with trap cards.</p>
+    
+    <p>Artifacts are the equivalent of both artifacts and enchantments in MtG, or of continuous spell and trap effects in Yu-Gi-Oh - they are a useful effect that is either continuous or triggered (sometimes both). As a general rule of thumb, the more powerful the effect, the more likely it is a structure instead of an artifact, and the more conditional the effect is, the more likely it is an artifact instead of a structure.</p>
+    
+    <h3>Fields</h3>
+    
+    <p>There is one field slot per player. If a new field is played, the old one is discarded. These act similarly to artifacts and structures. By contrast, however, their effect will, more often than not, be a symmetric effect.</p>
+    
+    <h3>Events</h3>
+    
+    <p>There is no limit to how many events can happen at once. Like field effects, they are symmetric. However, each event only lasts for a certain number of turns.</p>
+    
+    <h3>Actions</h3>
+    
+    <p>Actions are the equivalent of instants and sorceries in MtG or of spell cards in Yu-Gi-Oh. When they are played, rather than staying on the field, they are immediately sent to the discard pile after they resolve.</p>
+    
+    <p>You can only play an action on your turn, and not during other actions, unless it has the type "trap". If it is a trap, it must first be laid face down in an artifact slot, then activated when its condition is met.</p>
+    
+    <h3>Creatures, Monsters, Minions, or Whatever We'll Call Them</h3>
+    
+    <p>These are called so many different things across so many different games, but even those who've never played a card game should know how these work intuitively.</p>
+    
+    <p>Every creature has an attack value and a defense value. When a creature attacks, the defending creature fights back. Measure the attack of the creature attacking against the defense of the creature being attacked; if the attack is equal to or higher than the defense, the creature is destroyed. When two creatures fight, damage is dealt to both creatures simultaneously, unless otherwise specified. Damage to a creature persists within the context of a single turn, but is reset during every end step.</p>
+    
+    <p>Creatures, additionally, have stats. These stats are very similar to, albeit not the same as, the stats listed on heroes.</p>
+    
+    <h2>Special Card Types</h2>
+    
+    <p>These card types are always used in conjunction with the basic card types. The only special card type that can be shared with other special card types is "trap". Most cards do not have a special card type. Hero cards cannot have a special card type.</p>
+    
+    <h3>Traps</h3>
+    
+    <p>All cards which are not traps can only be activated during your turn, and only when you are not already playing a card or performing an action (such as attacking, or activating an artifact).</p>
+    
+    <p>Trap cards can be played during any turn and any phase, as well as in response to any action or ability. However, this is only true if it is first laid face-down in an artifact slot. If it is not face down in an artifact slot, it can only be played as if it were not a trap.</p>
+    
+    <p>Some traps can only be activated at the right "timing", AKA under the right conditions. This "timing" condition holds true even if it is not laid face down.</p>
+    
+    <h3>Chaos</h3>
+    
+    <p>Chaos cards are placed in your extra deck, rather than your main deck. They are special cards which can be cast straight from the deck, but only under the right conditions. These conditions are called its "timing".</p>
+    
+    <p>In addition to the limit of total extra deck cards, there is also a secondary limit of seven total cards between FAKE and chaos cards within that extra deck.</p>
+    
+    <h3>FAKE</h3>
+    
+    <p>When referencing FAKE cards, all caps should always be used.</p>
+    
+    <p>FAKE cards are placed in your extra deck, rather than your main deck. They are special cards which can be added to your hand under the right conditions. These conditions are called the card's "timing".</p>
+    
+    <p>In addition to the limit of total extra deck cards, there is also a secondary limit of seven total cards between FAKE and chaos cards within that extra deck.</p>
+    
+    <p>FAKE cards cannot be targeted unless the effect explicitly says you can target them. For all intents and purposes, until they're added to your hand, they don't exist. Adding a FAKE card to your hand is referred to as "materializing" the card.</p>
+    
+    <h3>Fusion</h3>
+    
+    <p>Fusion cards are placed in your extra deck, rather than your main deck. They are a special type of card that is only summoned by "fusing" two or more cards on the field. The fusion requirements are listed on the card itself. These cards can be any basic card type, other than hero.</p>
+    
+    <p>This special card type may need to be split into two smaller card types - one type that operates much like contact fusion or xyz monsters in Yu-Gi-Oh (only requiring the specified components) and one type that operates more like traditional fusion in Yu-Gi-Oh (where you can only fuse the cards if an effect explicitly allows you to). Further testing will be needed to decide.</p>
+    
+    <p>These cards should have a much decreased resource cost, compared to normal casting... if any resource cost at all. The cost is the cards you're sacrificing for the new card, and should be treated as such.</p>
+    
+    <h3>Symphonic</h3>
+    
+    <p>Symphonic cards are placed in your extra deck, rather than your main deck. They are a special type of card that is only summoned by "fusing" two or more cards on the field. One of these cards must be a special type of creature. For now I'll borrow the term "tuner" from Yu-Gi-Oh for these special creatures.</p>
+    
+    <p>These cards should have a much decreased resource cost, compared to normal casting... if any resource cost at all. The cost is the cards you're sacrificing for the new card, and should be treated as such.</p>
+    
+    <h3>Mosaics</h3>
+    
+    <p>Mosaic cards can be creatures and artifacts, but cannot be traps. These may be allowed to share a subtype with other special card types, but testing will be needed to see.</p>
+    
+    <p>Mosaic cards, without a mosaic link, operate just like a normal creature or artifact, albeit likely a bit more expensive to compensate for their special effects. However, when playing a new mosaic card, while you have an existing mosaic card, you can play it in the same artifact or creature slot as that existing card, provided you meet the proper conditions. If you do, stack the cards on top one another, such that the text boxes extend into one long text box. When adding a new card to a mosaic, it can either be added as the top or the bottom card in a stack, but cannot be added between two cards which are already fused.</p>
+    
+    <p>Mosaic cards have a condition for what kind of mosaic card they can link to. For example, a card may need the right subtype. However, mosaic cards have two extra stats - a color and a shape. Most mosaic cards list either a color or a shape required to link together, and most of what remains instead specifies a color or shape it cannot link with.</p>
+    
+    <p>When a mosaic stack (just called a "mosaic") is in an artifact slot, only the effects are considered (ignore the listed attack and defense on individual pieces). Most effects of mosaics gain a small but important bonus for having enough of a certain type of mosaic included in a stack. This means that the larger your mosaic, the stronger each of its individual pieces (called "shards") will be.</p>
+    
+    <p>When a mosaic is in a creature slot, consider the effects the same as if it was in an artifact slot, but the entire stack is considered to be one creature. To find the attack and defense of a mosaic, add together the attack and defense of the mosaic pieces (called "shards"). A mosaic attacks and defends as if it were a single creature.</p>
+    
+    <p>Effects that target a creature, artifact, or something of the sort can only target one shard as if it were not part of a mosaic. (Some cards might allow you to target an entire mosaic, but it must be explicitly stated.) For example, if an effect allows you to destroy a target creature, that effect can only target one shard, and only a shard which in isolation is a creature. If a destroyed shard is between two other shards, the link is lost and that shard "fractures" into two, individual mosaics. The mosaic which was defined as the lower half stays in the same slot it was originally in. The mosaic which was previously the upper half of the stack must enter a new artifact or creature slot. If the mosaic does not have a shard which is a creature in isolation, it can only be placed in an artifact slot. If there are no available slots, or if the controller so chooses, this mosaic (which was previously the upper half) "shatters" (is put into the discard pile).</p>
+    
+    <h2>Types of Card Casting</h2>
+    
+    <p>In addition to the other card types, every card that isn't a hero, symphonic or fusion has a "casting type". This is considered a card type but acts much more like a subtype.</p>
+    
+    <p>Every removal spell, counter spell, or something of the type specifies the casting type in addition to another card type. This prevents any one effect from being so broad it's a guaranteed staple (in theory...).</p>
+    
+    <p>Potential casting types include:</p>
+    
+    <ol>
+      <li>hire</li>
+      <li>summon</li>
+      <li>craft</li>
+      <li>recruit</li>
+    </ol>
+    
+    <p>As for assigning casting types, it should have a justification in both flavor and function. For ease of play, and versatility's sake, there should only be a few total casting types.</p>
+    
+    <p>Heroes do not have a casting type because they cannot be cast. Fusions and symphonics are considered to have the casting types "fusion" and "symphonic" respectively.</p>
+    
+    <h2>Potential Future Card Types</h2>
+    
+    <h3>Allies</p>
+    
+    <p>This card type should not be added upon release of the game because it adds significant complexity. It would be like introducing planeswalkers, sagas, vehicles, and equipment all within MtG's first set, as opposed to slowly adding them over time.</p>
+    
+    <p>Allies act as if they are a unique hero, with a unique health pool. They have all the same things listed in their text as a hero card. To compensate for their power, they'll typically be expensive, and typically have a far lower maximum and starting health than a player would.</p>
+    
+    <p>Allies have their own equipment slots, and can be equipped with their own equipment. If a weapon is equipped, they can make an attack, albeit only one attack per turn.</p>
+    
+    <p>If your hero's life is reduced to zero, even if you still have an active ally, you still lose.</p>
+
+  
+  </body>
+</html>
